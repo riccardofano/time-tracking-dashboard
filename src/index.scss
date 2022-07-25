@@ -1,0 +1,56 @@
+@use "/scss/mixins" as *;
+
+:root {
+  --c-yellow-400: hsl(43, 84%, 65%);
+  --c-orange-400: hsl(15, 100%, 70%);
+  --c-red-400: hsl(348, 100%, 68%);
+  --c-green-400: hsl(145, 58%, 55%);
+  --c-blue-300: hsl(195, 74%, 62%);
+  --c-blue-400: hsl(246, 80%, 60%);
+  --c-purple-400: hsl(264, 64%, 52%);
+
+  --c-neutral-100: hsl(0, 0%, 100%);
+  --c-neutral-300: hsl(236, 100%, 87%);
+  --c-neutral-400: hsl(235, 45%, 61%);
+  --c-neutral-800: hsl(235, 46%, 20%);
+  --c-neutral-900: hsl(226, 43%, 10%);
+
+  --fs-300: 0.8rem;
+  --fs-400: 15px;
+  --fs-500: 1.2rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 3rem;
+  --fs-900: 4rem;
+
+  --fs-body: var(--fs-400);
+  --fs-h1: var(--fs-600);
+  --fs-h2: var(--fs-500);
+  --fs-h3: var(--fs-700);
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 500;
+
+  --ff-primary: "Rubik", sans-serif;
+  --ff-body: var(--ff-primary);
+
+  --grid-gap: 1.6rem;
+  --card-lip: 2.5rem;
+
+  @include for-desktop() {
+    --fs-h1: var(--fs-800);
+    --fs-h3: var(--fs-900);
+    --grid-gap: 2rem;
+    --card-lip: 3rem;
+  }
+}
+
+body {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-body);
+
+  background-color: var(--c-neutral-800);
+  color: var(--c-neutral-100);
+}

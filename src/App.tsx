@@ -1,7 +1,7 @@
 import "./App.scss";
 
-import { ReactComponent as IconEllipses } from "./assets/icon-ellipsis.svg";
-import { ReactComponent as IconWork } from "./assets/icon-work.svg";
+import IconEllipses from "./assets/icon-ellipsis.svg";
+import IconWork from "./assets/icon-work.svg";
 
 function App() {
   return (

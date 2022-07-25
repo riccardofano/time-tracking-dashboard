@@ -1,7 +1,6 @@
 import "./App.scss";
 
-import IconEllipses from "./assets/icon-ellipsis.svg";
-import IconWork from "./assets/icon-work.svg";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -21,22 +20,7 @@ function App() {
         </div>
       </div>
 
-      <article>
-        <div>
-          <IconWork />
-        </div>
-        <div>
-          <h2>Work</h2>
-          <button>
-            <span>Open menu</span>
-            <IconEllipses />
-          </button>
-        </div>
-        <div>
-          <h3>32hrs</h3>
-          <p>Last Week - 36hrs</p>
-        </div>
-      </article>
+      <Card />
     </main>
   );
 }

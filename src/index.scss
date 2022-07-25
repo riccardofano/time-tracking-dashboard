@@ -1,4 +1,5 @@
 @forward "/scss/reset";
+@forward "/scss/utilities";
 @use "/scss/mixins" as *;
 
 :root {
@@ -25,6 +26,7 @@
   --fs-900: 4rem;
 
   --fs-body: var(--fs-400);
+  --fs-regular: var(--fs-body);
   --fs-h1: var(--fs-600);
   --fs-h2: var(--fs-500);
   --fs-h3: var(--fs-700);
@@ -52,6 +54,6 @@ body {
   font-weight: var(--fw-regular);
   font-family: var(--ff-body);
 
-  background-color: var(--c-neutral-800);
+  background-color: var(--c-neutral-900);
   color: var(--c-neutral-100);
 }

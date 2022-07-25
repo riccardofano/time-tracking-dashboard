@@ -25,6 +25,7 @@ blockquote,
 dl,
 dd {
   font-size: inherit;
+  font-weight: inherit;
 }
 
 /* Set core root defaults */
@@ -62,6 +63,13 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* Remove background and border from buttons */
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

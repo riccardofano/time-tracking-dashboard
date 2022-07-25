@@ -26,21 +26,23 @@ const categoryIcon: { [key in Categories]: string } = {
 function Card({ category, timeframe, previous, current }: CardProps) {
   return (
     <article>
-      <div>
+      <div className="backdrop | p-400 br-md" data-backdrop="after">
         <img src={`/icon-${categoryIcon[category]}.svg`} alt="" />
       </div>
-      <div>
-        <h2>{category}</h2>
-        <button>
-          <span>Open menu</span>
-          <IconEllipsis />
-        </button>
-      </div>
-      <div>
-        <h3>{current}hrs</h3>
-        <p>
-          Last {dictonary[timeframe]} - {previous}hrs
-        </p>
+      <div className="p-400 bg-blue-dark br-md">
+        <div className="flex flex-sb">
+          <h2 className="fs-h2">{category}</h2>
+          <button>
+            <span className="visually-hidden">Open menu</span>
+            <IconEllipsis />
+          </button>
+        </div>
+        <div className="flex flex-sb">
+          <h3 className="fs-h3 fw-light">{current}hrs</h3>
+          <p className="text-neutral-300">
+            Last {dictonary[timeframe]} - {previous}hrs
+          </p>
+        </div>
       </div>
     </article>
   );

@@ -30,16 +30,17 @@ function App() {
   };
 
   return (
-    <main>
+    <main className="container grid">
       <div>
-        <div>
+        <div className="flex p-400 bg-blue-light br-md">
           <img src="/image-jeremy.png" alt="" />
-          <h1>
-            <span>Report for</span>
+          <h1 className="fs-h1 fw-light">
+            <span className="block text-neutral-300 fs-regular">Report for</span>
             Jeremy Robson
           </h1>
         </div>
-        <div>
+
+        <div className="backdrop | p-400 flex flex-sb bg-blue-dark text-neutral-300 br-md" data-backdrop="before">
           <button onClick={() => setTimeframe("daily")} data-active={isActive("daily")}>
             Daily
           </button>

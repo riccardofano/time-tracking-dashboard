@@ -1,5 +1,3 @@
-import "./Card.scss";
-
 import { Categories, Timeframes } from "../App";
 import IconEllipsis from "../assets/icon-ellipsis.svg";
 
@@ -30,18 +28,19 @@ function Card({ category, timeframe, previous, current }: CardProps) {
     <article>
       <div className="card-lip | backdrop | br-md" data-backdrop="after" data-lip={category}>
         <div className="icon-wrapper">
-        <img src={`/icon-${categoryIcon[category]}.svg`} alt="" />
+          <img src={`/icon-${categoryIcon[category]}.svg`} alt="" />
+        </div>
       </div>
-      </div>
-        <div className="flex flex-sb">
-          <h2 className="fs-h2">{category}</h2>
-          <button>
+      <div className="card-body | p-400 bg-blue-dark br-md">
+        <div className="flex flex-sb flex-ac">
+          <h2 className="fs-h2 lh-sm">{category}</h2>
+          <button className="card-menu | flex">
             <span className="visually-hidden">Open menu</span>
             <IconEllipsis />
           </button>
         </div>
         <div className="card-info | flex">
-          <h3 className="fs-h3 fw-light">{current}hrs</h3>
+          <h3 className="fs-h3 fw-light ls-md">{current}hrs</h3>
           <p className="text-neutral-300">
             Last {dictonary[timeframe]} - {previous}hrs
           </p>

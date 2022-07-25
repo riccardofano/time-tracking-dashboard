@@ -1,15 +1,8 @@
 @use "/scss/mixins" as *;
 
-@include for-desktop {
-  body {
-    display: grid;
-    place-items: center;
-  }
-}
-
 .main-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--grid-gap);
   padding-top: 5rem;
   padding-bottom: 5rem;
 
@@ -34,28 +27,40 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding-top: 2.25rem;
 
   @include for-desktop() {
     flex-direction: column;
     align-items: flex-start;
     flex: 1;
-    gap: 2.5rem;
+    gap: 2.75rem;
   }
 }
 
 .timeframes {
   justify-content: space-between;
 
-  @include for-desktop {
+  @include for-desktop() {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
+    padding-top: 1.5rem;
   }
 
   > button {
     padding: 0 0.5rem;
+
+    @include for-desktop() {
+      padding: 0;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &[data-active="true"] {
+      color: var(--c-neutral-100);
+    }
   }
 }
 
@@ -67,6 +72,6 @@
   border-radius: 50%;
 
   @include for-desktop() {
-    --size: 5rem;
+    --size: 5.5rem;
   }
 }

@@ -25,6 +25,10 @@ function App() {
     setData(json as CardData[]);
   }, []);
 
+  const isActive = (t: Timeframes): boolean => {
+    return timeframe === t;
+  };
+
   return (
     <main>
       <div>
@@ -36,9 +40,15 @@ function App() {
           </h1>
         </div>
         <div>
-          <p>Daily</p>
-          <p>Weekly</p>
-          <p>Monthly</p>
+          <button onClick={() => setTimeframe("daily")} data-active={isActive("daily")}>
+            Daily
+          </button>
+          <button onClick={() => setTimeframe("weekly")} data-active={isActive("weekly")}>
+            Weekly
+          </button>
+          <button onClick={() => setTimeframe("monthly")} data-active={isActive("monthly")}>
+            Monthly
+          </button>
         </div>
       </div>
 

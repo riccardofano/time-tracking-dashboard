@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- Solution URL: [FrontendMentor solution](https://www.frontendmentor.io/solutions/responsive-time-tracking-dashboard-built-with-typescript-and-react-Wr0wY-bu-M)
 
 - Live Site URL: [time-tracking-dashboard-rf.netlify.app/](https://time-tracking-dashboard-rf.netlify.app/)
 

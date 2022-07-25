@@ -1,0 +1,72 @@
+@use "/scss/mixins" as *;
+
+@include for-desktop {
+  body {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.main-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include for-desktop() {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    padding: 0;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include for-desktop() {
+    grid-row: -1 / 1;
+  }
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @include for-desktop() {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    gap: 2.5rem;
+  }
+}
+
+.timeframes {
+  justify-content: space-between;
+
+  @include for-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  > button {
+    padding: 0 0.5rem;
+  }
+}
+
+.profile {
+  --size: 4rem;
+  width: var(--size);
+  height: var(--size);
+  border: 2px solid var(--c-neutral-100);
+  border-radius: 50%;
+
+  @include for-desktop() {
+    --size: 5rem;
+  }
+}

@@ -44,6 +44,10 @@
   font-size: var(--fs-h3);
 }
 
+.lh-sm {
+  line-height: 1.2;
+}
+
 .p-400 {
   padding: 1.5rem;
 }
@@ -60,10 +64,6 @@
 }
 .flex-sb {
   justify-content: space-between;
-  align-items: center;
-}
-.grid {
-  display: grid;
 }
 
 .container {

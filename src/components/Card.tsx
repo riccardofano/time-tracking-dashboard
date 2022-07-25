@@ -1,32 +1,46 @@
+import { Categories, Timeframes } from "../App";
 import IconEllipsis from "../assets/icon-ellipsis.svg";
-import IconWork from "../assets/icon-work.svg";
-
-export type Categories = "Work" | "Play" | "Study" | "Exercise" | "Social" | "Self Care";
-export type TimeFrames = "daily" | "weekly" | "monthly";
 
 interface CardProps {
   category: Categories;
-  timeFrame: TimeFrames;
-  current: number;
+  timeframe: Timeframes;
   previous: number;
+  current: number;
 }
 
-function Card() {
+const dictonary: { [key in Timeframes]: string } = {
+  daily: "Day",
+  weekly: "Week",
+  monthly: "Month",
+};
+
+const categoryIcon: { [key in Categories]: string } = {
+  Work: "work",
+  Play: "play",
+  Study: "study",
+  Exercise: "exercise",
+  Social: "social",
+  "Self Care": "self-care",
+};
+
+function Card({ category, timeframe, previous, current }: CardProps) {
   return (
     <article>
       <div>
-        <IconWork />
+        <img src={`/icon-${categoryIcon[category]}.svg`} alt="" />
       </div>
       <div>
-        <h2>Work</h2>
+        <h2>{category}</h2>
         <button>
           <span>Open menu</span>
           <IconEllipsis />
         </button>
       </div>
       <div>
-        <h3>32hrs</h3>
-        <p>Last Week - 36hrs</p>
+        <h3>{current}hrs</h3>
+        <p>
+          Last {dictonary[timeframe]} - {previous}hrs
+        </p>
       </div>
     </article>
   );

@@ -29,9 +29,10 @@ function Card({ category, timeframe, previous, current }: CardProps) {
   return (
     <article>
       <div className="card-lip | backdrop | br-md" data-backdrop="after" data-lip={category}>
+        <div className="icon-wrapper">
         <img src={`/icon-${categoryIcon[category]}.svg`} alt="" />
       </div>
-      <div className="p-400 bg-blue-dark br-md">
+      </div>
         <div className="flex flex-sb">
           <h2 className="fs-h2">{category}</h2>
           <button>

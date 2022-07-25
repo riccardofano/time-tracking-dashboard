@@ -1,0 +1,40 @@
+@use "/scss/mixins" as *;
+
+.card-lip {
+  height: var(--card-lip);
+  z-index: -1;
+
+  img {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  &[data-lip="Work"] {
+    background-color: var(--c-orange-400);
+  }
+  &[data-lip="Play"] {
+    background-color: var(--c-blue-300);
+  }
+  &[data-lip="Study"] {
+    background-color: var(--c-red-400);
+  }
+  &[data-lip="Exercise"] {
+    background-color: var(--c-green-400);
+  }
+  &[data-lip="Social"] {
+    background-color: var(--c-purple-400);
+  }
+  &[data-lip="Self Care"] {
+    background-color: var(--c-yellow-400);
+  }
+}
+
+.card-info {
+  justify-content: space-between;
+  align-items: center;
+
+  @include for-desktop() {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
